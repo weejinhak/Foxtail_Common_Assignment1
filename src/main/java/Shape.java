@@ -15,42 +15,44 @@ abstract class Shape implements Cloneable {
     }
 
 
-    abstract void draw(PApplet pApplet);
+    public void draw(PApplet pApplet){
+        pApplet.fill(color.getRed(), color.getGreen(), color.getBlue());
+    }
 
     abstract boolean checkCollision(int mouseX, int mouseY);
     @Override
     public Shape clone() {
         try {
-            Shape s = (Shape) super.clone();
-            s.color = this.color.clone();
-            return s;
+            Shape shape = (Shape) super.clone();
+            shape.color = this.color.clone();
+            return shape;
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
             return null;
         }
     }
 
-    public float getX() {
+    float getX() {
         return x;
     }
 
-    public void setX(float x) {
+    void setX(float x) {
         this.x = x;
     }
 
-    public float getY() {
+    float getY() {
         return y;
     }
 
-    public void setY(float y) {
+    void setY(float y) {
         this.y = y;
     }
 
-    public Color getColor() {
+    Color getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    void setColor(Color color) {
         this.color = color;
     }
 }

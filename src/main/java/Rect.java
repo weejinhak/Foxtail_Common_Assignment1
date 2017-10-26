@@ -11,7 +11,7 @@ public class Rect extends Shape {
 
     @Override
     public void draw(PApplet pApplet) {
-        pApplet.fill(super.getColor().getRed(), super.getColor().getGreen(), super.getColor().getBlue());
+        super.draw(pApplet);
         pApplet.rect(super.getX(), super.getY(), 35, 35);
         pApplet.rectMode(PConstants.CENTER);
     }
