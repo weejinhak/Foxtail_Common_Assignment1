@@ -24,6 +24,7 @@ public class ShapeTypeAdapter extends TypeAdapter<Shape> {
 
         Shape shape = null;
         while (reader.hasNext()) {
+            System.out.println("read까지 들어옴");
             switch (reader.nextName()) {
                 case "type":
                     String type = reader.nextString();
@@ -31,23 +32,24 @@ public class ShapeTypeAdapter extends TypeAdapter<Shape> {
                        shape  = new Rect();
                     else if (type.equals("Circle"))
                         shape = new Circle();
+                    else if(type.equals("Triangle"))
+                        shape = new Triangle();
                     break;
                 case "x":
                     if (shape != null)
                         shape.setX(reader.nextInt());
                     break;
                 case "y":
-                    if (shape != null){
+                    if (shape != null)
                         shape.setY(reader.nextInt());
-                    }
                     break;
                 case"r":
                     if(shape!=null)
                         shape.getColor().setRed(reader.nextInt());
                     break;
                 case"g":
-                    if(shape!=null)
-                        shape.getColor().setGreen(reader.nextInt());
+                    if(shape!=null){
+                        shape.getColor().setGreen(reader.nextInt());}
                     break;
                 case"b":
                     if(shape!=null)

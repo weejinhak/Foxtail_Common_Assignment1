@@ -6,12 +6,16 @@ abstract class Shape implements Cloneable {
     private float y;
     private Color color;
 
-    Shape(){}
-
     Shape(float x, float y, Color color){
         this.x=x;
         this.y=y;
         this.color = color;
+    }
+
+    public Shape() {
+        x=0;
+        y=0;
+        color=new Color();
     }
 
 
@@ -47,9 +51,7 @@ abstract class Shape implements Cloneable {
         this.y = y;
     }
 
-    public Color getColor() {
-        return color;
-    }
+    Color getColor() { return color; }
 
     void setColor(Color color) {
         this.color = color;

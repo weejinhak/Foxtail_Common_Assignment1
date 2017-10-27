@@ -2,8 +2,9 @@ import processing.core.PApplet;
 import processing.core.PConstants;
 
 public class Rect extends Shape {
-
-    Rect() {}
+    public Rect() {
+        super();
+    }
 
     Rect(float x, float y, Color color) {
         super(x, y, color);

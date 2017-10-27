@@ -1,13 +1,17 @@
 import processing.core.PApplet;
 
 public class Triangle extends Shape {
-    Triangle(float x, float y,Color color){
-        super(x,y,color);
+
+    Triangle(){super();}
+
+    Triangle(float x, float y, Color color) {
+        super(x, y, color);
     }
+
     @Override
-    public void draw(PApplet pApplet){
-        pApplet.fill(super.getColor().getRed(),super.getColor().getGreen(),super.getColor().getBlue());
-        pApplet.triangle(super.getX(), super.getY(), super.getX()+23, super.getY()-50,super.getX()+56,super.getY() );
+    public void draw(PApplet pApplet) {
+        pApplet.fill(super.getColor().getRed(), super.getColor().getGreen(), super.getColor().getBlue());
+        pApplet.triangle(super.getX(), super.getY(), super.getX() + 23, super.getY() - 50, super.getX() + 56, super.getY());
     }
 
     @Override
