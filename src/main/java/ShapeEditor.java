@@ -144,8 +144,7 @@ public class ShapeEditor extends PApplet implements Serializable {
 
     private void openShape() {
         Gson gson = new GsonBuilder().registerTypeHierarchyAdapter(Shape.class, new ShapeTypeAdapter()).create();
-        Type type = new TypeToken<List<Shape>>() {
-        }.getType();
+        Type type = new TypeToken<List<Shape>>() {}.getType();
         try (BufferedReader br = new BufferedReader(new FileReader("Shape.json"))) {
             shapeList = gson.fromJson(br, type);
         } catch (IOException e) {
