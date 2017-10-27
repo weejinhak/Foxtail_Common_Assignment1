@@ -47,7 +47,7 @@ abstract class Shape implements Cloneable {
         this.y = y;
     }
 
-    Color getColor() {
+    public Color getColor() {
         return color;
     }
 
