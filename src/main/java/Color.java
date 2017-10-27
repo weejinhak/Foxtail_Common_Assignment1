@@ -1,9 +1,13 @@
-public class Color implements Cloneable{
+public class Color implements Cloneable {
     private int red;
     private int green;
     private int blue;
 
-    Color() {red=0;green=0;blue=0;}
+    Color() {
+        red = 0;
+        green = 0;
+        blue = 0;
+    }
 
     Color(int red, int green, int blue) {
         this.red = red;

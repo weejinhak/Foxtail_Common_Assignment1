@@ -2,7 +2,7 @@ import processing.core.PApplet;
 import processing.core.PConstants;
 
 public class Rect extends Shape {
-    public Rect() {
+    Rect() {
         super();
     }
 
@@ -12,7 +12,7 @@ public class Rect extends Shape {
 
     @Override
     public void draw(PApplet pApplet) {
-        pApplet.fill(super.getColor().getRed(),super.getColor().getGreen(),super.getColor().getBlue());
+        pApplet.fill(super.getColor().getRed(), super.getColor().getGreen(), super.getColor().getBlue());
         pApplet.rect(super.getX(), super.getY(), 35, 35);
         pApplet.rectMode(PConstants.CENTER);
     }

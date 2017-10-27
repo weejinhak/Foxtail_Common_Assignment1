@@ -6,22 +6,23 @@ abstract class Shape implements Cloneable {
     private float y;
     private Color color;
 
-    Shape(float x, float y, Color color){
-        this.x=x;
-        this.y=y;
+    Shape(float x, float y, Color color) {
+        this.x = x;
+        this.y = y;
         this.color = color;
     }
 
     public Shape() {
-        x=0;
-        y=0;
-        color=new Color();
+        x = 0;
+        y = 0;
+        color = new Color();
     }
 
 
     abstract void draw(PApplet pApplet);
 
     abstract boolean checkCollision(int mouseX, int mouseY);
+
     @Override
     public Shape clone() {
         try {
@@ -51,7 +52,9 @@ abstract class Shape implements Cloneable {
         this.y = y;
     }
 
-    Color getColor() { return color; }
+    Color getColor() {
+        return color;
+    }
 
     void setColor(Color color) {
         this.color = color;

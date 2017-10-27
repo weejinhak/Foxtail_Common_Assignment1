@@ -2,7 +2,9 @@ import processing.core.PApplet;
 
 public class Triangle extends Shape {
 
-    Triangle(){super();}
+    Triangle() {
+        super();
+    }
 
     Triangle(float x, float y, Color color) {
         super(x, y, color);

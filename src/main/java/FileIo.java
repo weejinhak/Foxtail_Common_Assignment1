@@ -13,7 +13,7 @@ public class FileIo {
             BufferedOutputStream bos = new BufferedOutputStream(fos);
             ObjectOutputStream out = new ObjectOutputStream(bos);
 
-            Gson gson= new Gson();
+            Gson gson = new Gson();
 
             String json = gson.toJson(shapes);
 
@@ -31,7 +31,7 @@ public class FileIo {
             BufferedInputStream bis = new BufferedInputStream(fis);
             ObjectInputStream in = new ObjectInputStream(bis);
 
-            Gson gson= new Gson();
+            Gson gson = new Gson();
 
             shapes = (ArrayList<Shape>) in.readObject();
 

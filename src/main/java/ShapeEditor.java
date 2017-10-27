@@ -63,23 +63,23 @@ public class ShapeEditor extends PApplet implements Serializable {
             keyState = 2;
         if ((char) keyCode == '3')
             keyState = 3;
-        if ((char) keyCode == 'd'||(char)keyCode=='D')
+        if ((char) keyCode == 'd' || (char) keyCode == 'D')
             keyState = 9;
         if (keyState == 9 && isControlPressed) {
             System.out.println("복사");
             duplicateShape();
         }
-        if ((char) keyCode == 's'||(char)keyCode=='S')
+        if ((char) keyCode == 's' || (char) keyCode == 'S')
             keyState = 8;
         if (keyState == 8 && isControlPressed) {
             System.out.println("저장");
-           saveShape();
+            saveShape();
         }
-        if ((char) keyCode == 'o'||(char)keyCode=='O')
+        if ((char) keyCode == 'o' || (char) keyCode == 'O')
             keyState = 7;
         if (keyState == 7 && isControlPressed) {
             System.out.println("열기");
-           openShape();
+            openShape();
         }
     }
 
@@ -92,11 +92,8 @@ public class ShapeEditor extends PApplet implements Serializable {
     private void duplicateShape() {
         for (Shape e : shapeList) {
             if (e.checkCollision(mouseX, mouseY)) {
-                System.out.println("복사 충돌검사까진 하니");
                 Shape shape = e.clone();
-                System.out.println("도형 복사까진 하니");
                 shape.setX(shape.getX() + 15);
-                System.out.println("도형에 더해지긴 하니");
                 shapeList.add(shape);
                 return;
             }

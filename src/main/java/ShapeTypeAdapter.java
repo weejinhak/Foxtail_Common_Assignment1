@@ -24,7 +24,6 @@ public class ShapeTypeAdapter extends TypeAdapter<Shape> {
 
         Shape shape = null;
         while (reader.hasNext()) {
-            System.out.println("read까지 들어옴");
             switch (reader.nextName()) {
                 case "type":
                     String type = reader.nextString();
