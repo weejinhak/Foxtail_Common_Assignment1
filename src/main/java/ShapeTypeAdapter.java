@@ -37,8 +37,9 @@ public class ShapeTypeAdapter extends TypeAdapter<Shape> {
                         shape.setX(reader.nextInt());
                     break;
                 case "y":
-                    if (shape != null)
+                    if (shape != null){
                         shape.setY(reader.nextInt());
+                    }
                     break;
                 case"r":
                     if(shape!=null)

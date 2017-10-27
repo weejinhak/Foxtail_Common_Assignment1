@@ -92,8 +92,11 @@ public class ShapeEditor extends PApplet implements Serializable {
     private void duplicateShape() {
         for (Shape e : shapeList) {
             if (e.checkCollision(mouseX, mouseY)) {
+                System.out.println("복사 충돌검사까진 하니");
                 Shape shape = e.clone();
+                System.out.println("도형 복사까진 하니");
                 shape.setX(shape.getX() + 15);
+                System.out.println("도형에 더해지긴 하니");
                 shapeList.add(shape);
                 return;
             }

@@ -15,9 +15,7 @@ abstract class Shape implements Cloneable {
     }
 
 
-    public void draw(PApplet pApplet){
-        pApplet.fill(color.getRed(), color.getGreen(), color.getBlue());
-    }
+    abstract void draw(PApplet pApplet);
 
     abstract boolean checkCollision(int mouseX, int mouseY);
     @Override
@@ -25,6 +23,7 @@ abstract class Shape implements Cloneable {
         try {
             Shape shape = (Shape) super.clone();
             shape.color = this.color.clone();
+            System.out.println("복사까지 되고 있는 거니");
             return shape;
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
